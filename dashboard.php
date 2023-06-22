@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" style="position: relative; min-height: 100%;">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
 
     <title>Dashboard - Banco de Talentos</title>
   </head>
-  <body>
+  <body style="padding-bottom: 70px;">
     <!-- Barra de navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -32,7 +32,7 @@
     </nav>
 
     <!-- Conteúdo principal -->
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-bottom: 70px;">
       <div class="row">
         <!-- Menu lateral -->
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
@@ -45,7 +45,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Minhas Tarefas
+                  Minhas Vagas
                 </a>
               </li>
               <li class="nav-item">
@@ -53,12 +53,12 @@
                   Meus Candidatos
                 </a>
               </li>
-              <!-- Adicione mais links conforme necessário -->
+              <!-- Aqui podemos adicionar mais páginas a barra de navegação -->
             </ul>
           </div>
         </nav>
 
-        <!-- Conteúdo principal -->
+        <!-- aqui o conteudo principal  -->
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
@@ -110,7 +110,7 @@
                   <td>pendente</td>
                   <td>30/06/2023</td>
                 </tr>
-                <!-- Adicione mais tarefas conforme necessário -->
+                
               </tbody>
             </table>
           </div>
@@ -118,7 +118,7 @@
       </div>
     </div>
 
-
+    <?php include_once('templates/footer.php'); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Hj8Y6AsQyA7ELTnqzvB5M2gu0tGMJk3o8NX7ckAGWDU7Q48h76zELr7Er1t1wHjG" crossorigin="anonymous"></script>
 
   </body>
