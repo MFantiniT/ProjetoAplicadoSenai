@@ -32,6 +32,9 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
+              <a class="nav-link" href="#">Olá <?=$_SESSION['nome_usuario']?></a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#">Perfil</a>
             </li>
             <li class="nav-item">
