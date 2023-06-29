@@ -24,7 +24,7 @@
     if ($e->errorInfo[1] == 1062){
         $_SESSION['mensagem']= "Este email já esta cadastrado";
         
-        header("Location: $BASE_URL/cadastrar.php");
+        header("Location: ../cadastrar.php");
         exit();
     } else {
         echo "Erro: " . $e->getMessage();
