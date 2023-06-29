@@ -18,7 +18,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: inherit; 
+  color: black; 
 }
 a:hover{
   transition: 0.7s;
