@@ -55,7 +55,7 @@
       </div>
       <div class="modal-body">
         <!-- Form -->
-        <form action="addVagas.php" method="POST">
+        <form action="actions/addVagas.php" method="POST">
           <div class="form-group">
               <label for="jobTitle">Título da Vaga</label>
               <input type="text" class="form-control" id="jobTitle" name="jobTitle" required>
