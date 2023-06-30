@@ -6,4 +6,33 @@
             unset($_SESSION['mensagem']);
         }
     }
+
+    function exibeVagas($conn){
+        try {
+            $sql = "SELECT * FROM vagas";
+            $stmt = $conn -> prepare($sql);
+            $stmt->execute();
+            return $stmt;
+        } catch(PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+        }
+    }
+
+
+
+
+    
+    function pesquisaVagas($conn, $pesquisa){
+        try {
+            $sql = "SELECT * FROM vagas WHERE titulo_vaga LIKE :pesquisa OR descricao_vaga LIKE :pesquisa OR requisitos_vaga LIKE :pesquisa";
+            $pesquisa = '%' . $pesquisa . '%';
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(":pesquisa", $pesquisa);
+            $stmt->execute();
+            return $stmt;
+        } catch(PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+        }
+    }
+
 ?>
