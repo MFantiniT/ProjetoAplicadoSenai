@@ -24,6 +24,7 @@ try {
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <?= exibeMensagemSession(); ?>
         <h1 class="h2">Editar Vaga</h1>
     </div>
 
@@ -52,6 +53,8 @@ try {
             <label for="status_vaga">Status da Vaga</label>
             <input type="text" id="status_vaga" name="status_vaga" class="form-control" value="<?= $vaga['status_vaga'] ?>" required>
         </div>
+        <input type="hidden" name="id_vaga" value="<?= $id_vaga ?>">
+
 
         <button type="submit" class="btn btn-primary">Atualizar Vaga</button>
     </form>

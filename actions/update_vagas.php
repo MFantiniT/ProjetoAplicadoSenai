@@ -1,10 +1,10 @@
 <?php
-try {
-    // estabelece a conexão
-    $conn = new PDO('mysql:host=localhost;dbname=seu_banco_de_dados', 'usuario', 'senha');
+include_once("../conexaoDB.php");
 
+try {
+    session_start();
     // define a consulta SQL
-    $sql = 'UPDATE vaga SET titulo_vaga = :titulo_vaga, descricao_vaga = :descricao_vaga, requisitos_vaga = :requisitos_vaga, salario = :salario, status_vaga = :status_vaga WHERE id_vaga = :id_vaga';
+    $sql = 'UPDATE vagas SET titulo_vaga = :titulo_vaga, descricao_vaga = :descricao_vaga, requisitos_vaga = :requisitos_vaga, salario = :salario, status_vaga = :status_vaga WHERE id_vaga = :id_vaga';
 
     // prepara a consulta SQL
     $stmt = $conn->prepare($sql);
@@ -19,9 +19,9 @@ try {
 
     // executa a consulta
     $stmt->execute();
-
+    $_SESSION['mensagem']= " Alterações salvas!! ";
     // redireciona para a página de vagas após atualizar a vaga
-    header('Location: ver_minha_vaga.php');
+    header('Location: ../ver_minha_vaga.php?id_vaga='.$_POST['id_vaga']);
 } catch (PDOException $e) {
     echo 'Erro ao conectar com o banco de dados: ' . $e->getMessage();
     exit;

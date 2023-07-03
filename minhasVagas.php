@@ -16,6 +16,7 @@
           + Adicionar Vaga
         </button>
     </div>
+    <?= exibeMensagemSession() ?>
     <form action="MinhasVagas.php" method="post" class="input-group my-3">
         <input type="text" name="pesquisa" id="pesquisa" class="form-control" placeholder="Pesquisar">
         <button type="submit" class="btn btn-primary">Pesquisar</button>
