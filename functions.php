@@ -9,7 +9,7 @@
 
     function exibeVagas($conn){
         try {
-            $sql = "SELECT * FROM vagas";
+            $sql = "SELECT * FROM vagas WHERE id_recrutador=".$_SESSION['id_usuario'];
             $stmt = $conn -> prepare($sql);
             $stmt->execute();
             return $stmt;

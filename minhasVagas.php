@@ -35,7 +35,7 @@
                 <?php $contador = 1 ?>
                     <tr>
                     <td><?= $contador ?></td>
-                    <td><a href="#"><?= $resultado['titulo_vaga'] ?></a></td>
+                    <td><a href="ver_minha_vaga.php?id_vaga=<?=$resultado['id_vaga']?>"><?= $resultado['titulo_vaga'] ?></a></td>
                     <td><?= $resultado['status_vaga'] ?></td>
                     
                     </tr>
