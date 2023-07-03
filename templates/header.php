@@ -27,7 +27,11 @@
     <!-- Barra de navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Banco de Talentos</a>
+        <?php if($_SESSION['id_usuario']<=2):?>
+          <a class="navbar-brand" href="dashboard.php">BankFellas</a>
+        <?php else: ?>
+          <a class="navbar-brand" href="vagas.php">BankFellas</a>
+        <?php endif; ?>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,7 +50,7 @@
         </div>
       </div>
     </nav>
-
+    <?php if($_SESSION['id_usuario']<=2):?>
     <!-- Conteúdo principal -->
     <div class="container-fluid" style="padding-bottom: 70px;">
       <div class="row">
@@ -73,3 +77,27 @@
             </ul>
           </div>
         </nav>
+        <?php else: ?>
+              <!-- Conteúdo principal -->
+    <div class="container-fluid" style="padding-bottom: 70px;">
+      <div class="row">
+        <!-- Menu lateral -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+
+              <li class="nav-item">
+                <a class="nav-link" href="vagas.php">
+                  Vagas
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="candidatura.php">
+                  Candidaturas
+                </a>
+              </li>
+              <!-- Aqui podemos adicionar mais páginas a barra de navegação -->
+            </ul>
+          </div>
+        </nav>
+        <?php endif; ?>

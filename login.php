@@ -1,6 +1,7 @@
 <?php
  include_once('helpers/url.php');
  include_once('functions.php');
+ session_start();
 ?>
 <!doctype html>
 <html lang="pt-br">

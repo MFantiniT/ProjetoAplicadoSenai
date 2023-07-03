@@ -1,10 +1,10 @@
 <?php
  include_once('../conexaoDB.php');
  include_once('../helpers/url.php');
-
+ 
+ session_start();
  $usuario = $_POST['email'];
  $senha = $_POST['senha'];
- session_start();
  $sql = "SELECT * FROM usuario WHERE email=:usuario";
  $stmt = $conn->prepare($sql);
  $stmt->bindParam(":usuario", $usuario);
