@@ -16,7 +16,7 @@
           + Adicionar Vaga
         </button>
     </div>
-    <?= exibeMensagemSession() ?>
+    
     <form action="MinhasVagas.php" method="post" class="input-group my-3">
         <input type="text" name="pesquisa" id="pesquisa" class="form-control" placeholder="Pesquisar">
         <button type="submit" class="btn btn-primary">Pesquisar</button>
@@ -32,8 +32,9 @@
             </tr>
           </thead>
           <tbody>
+          <?php $contador = 1 ?>
             <?php while($resultado = $result->fetch(PDO::FETCH_ASSOC)): ?>
-                <?php $contador = 1 ?>
+                
                     <tr>
                     <td><?= $contador ?></td>
                     <td><a href="ver_minha_vaga.php?id_vaga=<?=$resultado['id_vaga']?>"><?= $resultado['titulo_vaga'] ?></a></td>

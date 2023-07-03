@@ -14,7 +14,8 @@
             $stmt->execute();
             return $stmt;
         } catch(PDOException $e) {
-            echo "Erro: " . $e->getMessage();
+            error_log("Erro: " . $e->getMessage());
+            echo "Ocorreu um erro. Por favor, tente novamente mais tarde.";
         }
     }
 
@@ -31,7 +32,8 @@
             $stmt->execute();
             return $stmt;
         } catch(PDOException $e) {
-            echo "Erro: " . $e->getMessage();
+            error_log("Erro: " . $e->getMessage());
+            echo "Ocorreu um erro. Por favor, tente novamente mais tarde.";
         }
     }
 
