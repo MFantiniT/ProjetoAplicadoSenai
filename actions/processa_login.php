@@ -13,8 +13,12 @@
  if($result['email'] == $usuario && password_verify($senha, $result['senha_hash'])){
     $_SESSION['mensagem']= "Olá ".$result['nome_usuario']." você está logado";
     $_SESSION['id_usuario'] = $result['id_usuario']; // 
-    $_SESSION['nome_usuario'] = $result['nome_usuario']; 
+    $_SESSION['nome_usuario'] = $result['nome_usuario'];
+    if($_SESSION['id_usuario']<=2){ 
     header("Location: ../dashboard.php");
+    } else {
+        header("Location: ../vagas.php");
+    }
 } else {
     $_SESSION['mensagem'] = "Nome de usuário ou senha incorretos.";
     header("Location: ../login.php");

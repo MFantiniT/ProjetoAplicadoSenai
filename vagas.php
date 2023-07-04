@@ -34,10 +34,11 @@ include_once('templates/header.php');
                     echo '<p><strong>Requisitos:</strong> ' . $vaga['requisitos_vaga'] . '</p>';
                     echo '<p><strong>Salário:</strong> ' . $vaga['salario'] . '</p>';
                     echo '<p><strong>Status:</strong> ' . $vaga['status_vaga'] . '</p>';
-                    echo '<a href="candidatar.php?id_vaga=' . $vaga['id_vaga'] . '" class="btn btn-primary">Candidatar-se</a>';
+                    echo '<a href="actions/processa_aplicacao.php?id_vaga=' . $vaga['id_vaga'] . '" class="btn btn-primary">Candidatar-se</a>';
                     echo '</div>';
                 }
             } else {
+                exibeMensagemSession();
                 echo '<div class="card-body">';
                 echo '<p>Selecione uma vaga para ver detalhes.</p>';
                 echo '</div>';
