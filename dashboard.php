@@ -1,4 +1,4 @@
-<?php include_once('templates/header.php');?>
+<?php include_once('templates/header.php'); ?>
 
         <!-- aqui o conteudo principal  -->
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
